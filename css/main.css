@@ -2717,3 +2717,17 @@ header.header {
     padding: 10px 12px;
   }
 }
+.links-of-recent-posts {
+  font-size: 0.8125em;
+  margin-top: 10px;
+}
+.links-of-recent-posts-title {
+  font-size: 1.03em;
+  font-weight: 600;
+  margin-top: 0;
+}
+.links-of-recent-posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
