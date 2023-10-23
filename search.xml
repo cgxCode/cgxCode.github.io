@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>实时数仓方案五花八门，实际落地如何选型和构建</title>
-    <url>/2023/10/23/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E6%96%B9%E6%A1%88%E4%BA%94%E8%8A%B1%E5%85%AB%E9%97%A8%EF%BC%8C%E5%AE%9E%E9%99%85%E8%90%BD%E5%9C%B0%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B%E5%92%8C%E6%9E%84%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="为何需要实时数仓架构"><a href="#为何需要实时数仓架构" class="headerlink" title="为何需要实时数仓架构"></a>为何需要实时数仓架构</h1><p>  最初企业存储数据都在数仓中存储，但是随着数据量的增大，传统数据的方案在时效性上和数据维护上变得越来越困难。实时数仓架构应运而生。<br>然而问题并不是这么简单，在具体方案落地上实时数仓有很多方案可以选择，那么面对不同的业务和应用场景我们到底应该选择哪种技术方案呢？这是困扰好多大数据架构师的问题。<br>本文就针对该问题梳理了市场上常见的实时数仓方案和对应的应用场景。以便大家在选择或者使用实时数仓架构时能够有的放矢。当然，在职业规划中，对应于想要成为大架构师的你而言，通过本文阅读你将会让你了解大数据架构必须掌握的数仓知识。尤其在实时数仓各种方案对比上会让你对数仓的理解更上一层楼。<br>另外，即便你不是大数据方面的研发人员，这一篇中处理数据的流程和思路，也一样会对你日常的工作有所帮助。</p>
+    <title>Flink基础之概述</title>
+    <url>/2023/10/23/Flink%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="Apache-Flink-的命脉"><a href="#Apache-Flink-的命脉" class="headerlink" title="Apache Flink 的命脉"></a>Apache Flink 的命脉</h1><p>Apache Flink 是以”批是流的特例”的认知进行系统设计的。</p>
+<h1 id="唯快不破"><a href="#唯快不破" class="headerlink" title="唯快不破"></a>唯快不破</h1><p>对比目前最热的两种流计算引擎 Spark和 Flink，单从 “低延时” 的角度看，Spark是Micro Batching（微批式）模式，最低延迟Spark能达到0.5~2秒左右，Flink是Native Streaming（纯流式）模式，最低延时能达到微秒。很显然是相对较晚出道的 Apache Flink 后来者居上。<br>那么为什么Flink能做到如此之 “快”呢？根本原因是Apache Flink 设计之初就认为 “批是流的特例”，整个系统是纯流式模式设计，每来一条数据都能够触发计算。相对于需要靠时间来积攒数据微批式模式来说，在架构上就已经占据了绝对优势。<br>那么为什么关于流计算会有两种计算模式呢？归其根本是因为对流计算的认知不同，是”流是批的特例” 和 “批是流的特例” 两种不同认知产物。</p>
 ]]></content>
       <categories>
-        <category>实时数仓</category>
+        <category>flink</category>
       </categories>
       <tags>
-        <tag>实时数仓</tag>
+        <tag>flink</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>发布第一篇个人博客</title>
+    <url>/2023/10/23/%E5%8F%91%E5%B8%83%E7%AC%AC%E4%B8%80%E7%AF%87%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -31,24 +40,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>发布第一篇个人博客</title>
-    <url>/2023/10/23/%E5%8F%91%E5%B8%83%E7%AC%AC%E4%B8%80%E7%AF%87%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flink基础之概述</title>
-    <url>/2023/10/23/Flink%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="Apache-Flink-的命脉"><a href="#Apache-Flink-的命脉" class="headerlink" title="Apache Flink 的命脉"></a>Apache Flink 的命脉</h1><p>Apache Flink 是以”批是流的特例”的认知进行系统设计的。</p>
-<h1 id="唯快不破"><a href="#唯快不破" class="headerlink" title="唯快不破"></a>唯快不破</h1><p>对比目前最热的两种流计算引擎 Spark和 Flink，单从 “低延时” 的角度看，Spark是Micro Batching（微批式）模式，最低延迟Spark能达到0.5~2秒左右，Flink是Native Streaming（纯流式）模式，最低延时能达到微秒。很显然是相对较晚出道的 Apache Flink 后来者居上。<br>那么为什么Flink能做到如此之 “快”呢？根本原因是Apache Flink 设计之初就认为 “批是流的特例”，整个系统是纯流式模式设计，每来一条数据都能够触发计算。相对于需要靠时间来积攒数据微批式模式来说，在架构上就已经占据了绝对优势。<br>那么为什么关于流计算会有两种计算模式呢？归其根本是因为对流计算的认知不同，是”流是批的特例” 和 “批是流的特例” 两种不同认知产物。</p>
+    <title>实时数仓方案五花八门，实际落地如何选型和构建</title>
+    <url>/2023/10/23/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E6%96%B9%E6%A1%88%E4%BA%94%E8%8A%B1%E5%85%AB%E9%97%A8%EF%BC%8C%E5%AE%9E%E9%99%85%E8%90%BD%E5%9C%B0%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B%E5%92%8C%E6%9E%84%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="为何需要实时数仓架构"><a href="#为何需要实时数仓架构" class="headerlink" title="为何需要实时数仓架构"></a>为何需要实时数仓架构</h1><p>  最初企业存储数据都在数仓中存储，但是随着数据量的增大，传统数据的方案在时效性上和数据维护上变得越来越困难。实时数仓架构应运而生。<br>然而问题并不是这么简单，在具体方案落地上实时数仓有很多方案可以选择，那么面对不同的业务和应用场景我们到底应该选择哪种技术方案呢？这是困扰好多大数据架构师的问题。<br>本文就针对该问题梳理了市场上常见的实时数仓方案和对应的应用场景。以便大家在选择或者使用实时数仓架构时能够有的放矢。当然，在职业规划中，对应于想要成为大架构师的你而言，通过本文阅读你将会让你了解大数据架构必须掌握的数仓知识。尤其在实时数仓各种方案对比上会让你对数仓的理解更上一层楼。<br>另外，即便你不是大数据方面的研发人员，这一篇中处理数据的流程和思路，也一样会对你日常的工作有所帮助。</p>
 ]]></content>
       <categories>
-        <category>flink</category>
+        <category>实时数仓</category>
       </categories>
       <tags>
-        <tag>flink</tag>
+        <tag>实时数仓</tag>
       </tags>
   </entry>
 </search>
