@@ -2731,3 +2731,6 @@ header.header {
   margin: 0;
   padding: 0;
 }
+.headband {
+  display: none;
+}
